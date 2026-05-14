@@ -1,0 +1,84 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 100% 2%;
+    --foreground: 45 100% 90%;
+    --card: 40 100% 3%;
+    --card-foreground: 45 100% 90%;
+    --popover: 40 100% 2%;
+    --popover-foreground: 45 100% 90%;
+    --primary: 45 93% 47%;
+    --primary-foreground: 40 100% 2%;
+    --secondary: 40 10% 12%;
+    --secondary-foreground: 45 100% 90%;
+    --muted: 40 10% 12%;
+    --muted-foreground: 45 20% 60%;
+    --accent: 45 93% 47%;
+    --accent-foreground: 40 100% 2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 45 100% 90%;
+    --border: 45 93% 47% / 0.1;
+    --input: 45 20% 12%;
+    --ring: 45 93% 47%;
+    --radius: 1.5rem;
+  }
+}
+
+body {
+  background-color: #070705;
+  color: #fef3c7;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Cyber-Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070705;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f59e0b20;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
+
+/* Custom Text Glow */
+.text-glow {
+  text-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+}
+
+.active-glow {
+  filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.6));
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+/* Glass Enhancement */
+.glass-panel {
+  background: rgba(12, 12, 9, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(245, 158, 11, 0.05);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
